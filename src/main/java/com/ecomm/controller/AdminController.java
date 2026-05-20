@@ -25,7 +25,7 @@ public class AdminController {
 
     @GetMapping("/dashboard")
     public String dashboard(Model model) {
-        model.append("productCount", productService.getAllProducts().size());
+        model.addAttribute("productCount", productService.getAllProducts().size());
         model.addAttribute("categoryCount", categoryService.getAllCategories().size());
         model.addAttribute("customerCount", customerService.getAllCustomers().size());
         return "admin/dashboard";

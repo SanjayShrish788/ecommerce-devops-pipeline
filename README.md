@@ -1,6 +1,11 @@
-# E-Commerce Management System with DevOps
+# E-Commerce Management System with DevOps Pipeline
 
-This is a complete full-stack E-Commerce Management System built with Spring Boot, MySQL, Thymeleaf, and Bootstrap 5. It incorporates DevOps practices including Docker containerization and a Jenkins CI/CD pipeline.
+A full-stack E-Commerce Management System built with Spring Boot, MySQL, and Thymeleaf, featuring a fully containerized architecture (Docker) and an automated CI/CD pipeline (Jenkins).
+
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
 
 ## Features
 - **Customer:** Register, Login, Browse Products, Add to Cart.
@@ -14,21 +19,57 @@ This is a complete full-stack E-Commerce Management System built with Spring Boo
 - **Frontend:** Thymeleaf, Bootstrap 5, HTML5, CSS3
 - **Build Tool:** Maven
 
-## Prerequisites
+## Default Credentials
+The database is pre-seeded with an admin user.
+- **Username:** `admin`
+- **Password:** `admin123`
+
+---
+
+## 🚀 How to Run (Using Docker)
+
+The easiest way to run the application is using Docker Compose. This will automatically set up the MySQL database, seed the initial data, build the application, and start it up.
+
+### Prerequisites
+- Docker and Docker Desktop installed and running.
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SanjayShrish788/ecommerce-devops-pipeline.git
+   cd ecommerce-devops-pipeline
+   ```
+2. Build and start the containers:
+   ```bash
+   docker-compose up --build -d
+   ```
+3. Open your browser and navigate to:
+   - **Shop/Customer view:** `http://localhost:8080`
+   - **Admin Login:** `http://localhost:8080/login`
+   
+4. To stop the application:
+   ```bash
+   docker-compose down
+   ```
+
+---
+
+## 💻 How to Run (Local Development)
+
+If you wish to run the app directly via Maven without Docker for the application server (you still need MySQL):
+
+### Prerequisites
 - Java 17
 - Maven 3.x
-- Docker & Docker Compose
-- MySQL (if running locally without Docker)
+- MySQL running locally on port 3306
 
-## Local Setup
-1. Clone the repository.
-2. (Optional) Run `docker-compose up -d mysql` to start the local MySQL container.
-3. Run `mvn spring-boot:run` to start the application.
-4. Access the app at `http://localhost:8080`.
-
-## Docker Setup
-1. Run `docker-compose up --build -d`
-2. The app will be available at `http://localhost:8080`.
+### Steps
+1. Create a database named `ecommjava` in your local MySQL instance.
+2. Verify the username and password in `src/main/resources/application.properties` (defaults are root/root).
+3. Run the application:
+   ```bash
+   mvn spring-boot:run
+   ```
 
 ## Git Branching Strategy
 - `main` — stable production-ready code

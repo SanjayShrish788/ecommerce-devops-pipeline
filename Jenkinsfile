@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('1 - Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/yourusername/ecommerce-devops.git'
+                git branch: 'main', url: 'https://github.com/SanjayShrish788/ecommerce-devops-pipeline.git'
             }
         }
         stage('2 - Build') {
