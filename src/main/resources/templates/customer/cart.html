@@ -50,10 +50,10 @@
                                 <span th:text="${item.product.name}"></span>
                             </div>
                         </td>
-                        <td th:text="'$' + ${item.product.price}"></td>
+                        <td th:text="'₹' + ${item.product.price}"></td>
                         <td th:text="${item.quantity}"></td>
                         <!-- Subtotal = unit price × quantity -->
-                        <td th:text="'$' + ${#numbers.formatDecimal(item.subtotal, 1, 2)}"></td>
+                        <td th:text="'₹' + ${#numbers.formatDecimal(item.subtotal, 1, 2)}"></td>
                         <td>
                             <!-- BUG FIX: Remove from cart button was completely missing -->
                             <a th:href="@{/cart/remove/{id}(id=${item.id})}"
@@ -67,7 +67,7 @@
                 <tfoot>
                     <tr class="table-light fw-bold">
                         <td colspan="3" class="text-end">Order Total:</td>
-                        <td colspan="2" th:text="'$' + ${#numbers.formatDecimal(cartTotal, 1, 2)}"></td>
+                        <td colspan="2" th:text="'₹' + ${#numbers.formatDecimal(cartTotal, 1, 2)}"></td>
                     </tr>
                 </tfoot>
             </table>

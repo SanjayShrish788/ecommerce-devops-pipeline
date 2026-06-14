@@ -60,7 +60,7 @@
                            th:text="${product.category != null ? product.category.name : 'Uncategorized'}"></p>
                         <h5 class="card-title" th:text="${product.name}"></h5>
                         <p class="card-text text-muted small" th:text="${product.description}"></p>
-                        <h4 class="mt-auto product-price" th:text="'$' + ${product.price}"></h4>
+                        <h4 class="mt-auto product-price" th:text="'₹' + ${product.price}"></h4>
                     </div>
 
                     <div class="card-footer bg-white border-0 text-center pb-3">
