@@ -1,0 +1,279 @@
+/* ===================================================
+   E-Commerce Global Styles
+   Google Fonts — loaded via @import for premium feel
+   =================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Reset & Base --------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    color: #1a1d23;
+    min-height: 100vh;
+}
+
+/* --- Navbar --------------------------------------- */
+.navbar {
+    background: linear-gradient(135deg, #1a1d23 0%, #2c3e50 100%) !important;
+    padding: 0.9rem 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.3px;
+    transition: opacity 0.2s;
+}
+
+.navbar-brand:hover {
+    opacity: 0.85;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: 6px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.btn-link {
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+
+/* --- Cards ---------------------------------------- */
+.card {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1a1d23;
+}
+
+/* --- Product Cards -------------------------------- */
+.product-card {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.03);
+}
+
+.product-price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #0d6efd;
+}
+
+.shop-title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1a1d23;
+    letter-spacing: -0.5px;
+}
+
+/* --- Buttons -------------------------------------- */
+.btn {
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd 0%, #0856cc 100%);
+    border: none;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.35);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0b5ed7 0%, #0745a8 100%);
+    box-shadow: 0 4px 14px rgba(13, 110, 253, 0.45);
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #e6a800 100%);
+    color: #1a1d23;
+    border: none;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.35);
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #ffca2c 0%, #d49e00 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(255, 193, 7, 0.45);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);
+    border: none;
+}
+
+.btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+    border: none;
+}
+
+/* --- Form Controls -------------------------------- */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1.5px solid #dee2e6;
+    padding: 0.55rem 0.9rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.input-group-text {
+    background: #f8f9fa;
+    border: 1.5px solid #dee2e6;
+    border-radius: 8px 0 0 8px;
+}
+
+/* --- Dashboard Cards ------------------------------ */
+.dashboard-card {
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #0d6efd, #6610f2);
+    border-radius: 4px 0 0 4px;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-card h3 {
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-card h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin: 0.25rem 0;
+}
+
+/* --- Alerts --------------------------------------- */
+.alert {
+    border: none;
+    border-radius: 10px;
+}
+
+.alert-success {
+    background: #d1f5df;
+    color: #0a5c2e;
+}
+
+.alert-danger {
+    background: #fde8eb;
+    color: #821b26;
+}
+
+.alert-info {
+    background: #d9edff;
+    color: #0a3d7a;
+}
+
+/* --- Tables --------------------------------------- */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-dark th {
+    background: #1a1d23;
+    border-color: #2c3e50;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s;
+}
+
+.table tbody tr:hover {
+    background-color: #f8faff;
+}
+
+/* --- Badges --------------------------------------- */
+.badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+    border-radius: 6px;
+}
+
+/* --- Footer --------------------------------------- */
+footer {
+    color: #6c757d;
+    font-size: 0.85rem;
+    border-top: 1px solid #e9ecef;
+}
+
+/* --- Utilities ------------------------------------ */
+.gap-3 {
+    gap: 0.75rem;
+}
